@@ -4,9 +4,13 @@ import control.ControlAjouterAlimentCarte;
 import model.Accompagnement;
 import model.Boisson;
 import model.Hamburger;
+import restaurationRapide.AlimentMenu;
+import model.Carte;
+import model.Aliment;
 
 public class BoundaryAjouterAlimentCarte {
-	private ControlAjouterAlimentCarte controlAjouterAlimentCarte = new ControlAjouterAlimentCarte();
+	Carte carte;
+	private ControlAjouterAlimentCarte controlAjouterAlimentCarte = new ControlAjouterAlimentCarte(carte);
 
 	private Clavier clavier = new Clavier();   
 	
@@ -27,13 +31,13 @@ public class BoundaryAjouterAlimentCarte {
 
 		switch (choix) {
 			case 1 :
-				controlAjouterAlimentCarte.ajouterAliment(Hamburger.nom);
+				controlAjouterAlimentCarte.ajouterAliment(AlimentMenu.HAMBURGER, nom);
 				break;
 			case 2 :
-				controlAjouterAlimentCarte.ajouterAliment(Boisson.nom);
+				controlAjouterAlimentCarte.ajouterAliment(AlimentMenu.BOISSON, nom);
 				break;
 			case 3 :
-				controlAjouterAlimentCarte.ajouterAliment(Accompagnement.nom);
+				controlAjouterAlimentCarte.ajouterAliment(AlimentMenu.ACCOMPAGNEMENT, nom);
 				break;
 			default :
 				System.out.println();

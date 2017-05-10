@@ -43,5 +43,10 @@ import model.Profil;
 	        return data;
 
 	    }
+	    
+	    public Client getClient(Integer numprofil) {
+	        return this.hm.get(numprofil);
+	    }
+
 	}
 

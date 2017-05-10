@@ -29,9 +29,9 @@ public class TestCasSIdentifierPersonnel {
 		// Lancement du cas
 		boundarySIdentifierPersonnel.identificationPersonnel();
 
-		// Verification de la bonne réalisation du cas
+		// Verification de la bonne rï¿½alisation du cas
 		System.out.println("VERIFICATION");
-		System.out.println(controlSIdentifier.visualiserBDUtilisateur());
+		System.out.println(controlSIdentifier.visualiserBDPersonnel());
 
 		// Resultat du test
 		// Veuilliez entrer votre login

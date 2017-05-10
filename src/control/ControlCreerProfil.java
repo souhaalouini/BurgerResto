@@ -1,6 +1,7 @@
 package control;
 import restaurationRapide.BDClient;
 import restaurationRapide.BDPersonnel;
+import restaurationRapide.ProfilUtilisateur;
 import model.Client;
 import model.Personnel;
 import model.Profil.TypeProfil;
@@ -14,20 +15,20 @@ public class ControlCreerProfil {
         this.laBDPersonnel = bdPersonnel;
     }
 
-    public void creerProfil(TypeProfil profil, String nom, String prenom, String mdp) {
+    public void creerProfil(ProfilUtilisateur profil, String nom, String prenom, String mdp) {
         switch (profil) {
-            case Gerant:
+            case GERANT:
                 Personnel gerant = new Personnel(nom, prenom, mdp);
                 gerant.definirGerant();
                 laBDPersonnel.ajouterPersonnel(gerant);
                 break;
 
-            case Personnel:
+            case PERSONNEL:
                 Personnel perso = new Personnel(nom, prenom, mdp);
                 laBDPersonnel.ajouterPersonnel(perso);
                 break;
 
-            case Client:
+            case CLIENT:
                 Client client = new Client(nom, prenom, mdp);
                 laBDClient.ajouterClient(client);
                 break;
@@ -41,4 +42,9 @@ public class ControlCreerProfil {
     public String visualiserBDPersonnel() {
         return "Compte de type personnel :\n" + laBDPersonnel.toString();
     }
+
+	public String visualiserBDUtilisateur() {
+		// TODO Auto-generated method stub
+		return this.laBDClient.toString();
+	}
 }

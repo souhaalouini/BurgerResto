@@ -42,6 +42,10 @@ public class BDPersonnel {
 
         }
         return data;
-
     }
+    
+    public Personnel getPersonnel(Integer numprofil) {
+        return this.hm.get(numprofil);
+    }
+
 }

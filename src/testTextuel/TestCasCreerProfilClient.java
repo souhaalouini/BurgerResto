@@ -3,9 +3,9 @@ package testTextuel;
 import control.ControlCreerProfil;
 import restaurationRapide.BDClient;
 import restaurationRapide.BDPersonnel;
-import vueTextuelle.BoundaryCreerProfilGerant;
+import vueTextuelle.BoundaryCreerProfilClient;
 
-public class TestCasCreerProfilGerant {
+public class TestCasCreerProfilClient {
 
 	public static void main(String[] args) {
 		// Initialisation des objets metier
@@ -16,27 +16,25 @@ public class TestCasCreerProfilGerant {
 		ControlCreerProfil controlCreerProfil = new ControlCreerProfil(
 				bdClient, bdPersonnel);
 		// Initialisation vue du cas
-		BoundaryCreerProfilGerant boundaryCreerProfilGerant = new BoundaryCreerProfilGerant(
+		BoundaryCreerProfilClient boundaryCreerProfilClient = new BoundaryCreerProfilClient(
 				controlCreerProfil);
 
 		// Lancement du cas
-		boundaryCreerProfilGerant.creerProfilGerant();
+		boundaryCreerProfilClient.creerProfilClient();
 
 		// Verification de la bonne realisation du cas
 		System.out.println("VERIFICATION");
-		System.out.println(controlCreerProfil.visualiserBDPersonnel());
+		System.out.println(controlCreerProfil.visualiserBDUtilisateur());
 		
 		// Resultat du test
 		// Veuillez entrer votre nom
-		// Victor
+		// Dupond
 		// Veuillez entrer votre prenom
-		// Martin
+		// Hector
 		// Veuillez entrer votre mot de passe
-		// gmv
+		// cdh
 		// VERIFICATION
-		// BDPersonnel [listePersonnel={0=Profil [nom=Victor, prenom=Martin,
-		// login=Martin.Victor, mdp=gmv, connecte=false]Personnel
-		// [gerant=true]}]
-		// BDClient [listeClient={}]
+		// BDPersonnel [listePersonnel={}]
+		// BDClient [listeClient={0=Profil [nom=Dupond, prenom=Hector, login=Hector.Dupond, mdp=cdh, connecte=false]}]
 	}
 }

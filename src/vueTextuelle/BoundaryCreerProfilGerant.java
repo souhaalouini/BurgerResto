@@ -1,6 +1,7 @@
 package vueTextuelle;
 
 import model.Profil;
+import restaurationRapide.ProfilUtilisateur;
 import model.Profil.TypeProfil;
 
 import java.io.BufferedReader;
@@ -33,7 +34,7 @@ public class BoundaryCreerProfilGerant {
             System.out.print("Veuillez entrer votre mot de passe : ");
             mdp = bf.readLine();
             
-            creerProfil.creerProfil(TypeProfil.Gerant, nom, prenom, mdp);
+            creerProfil.creerProfil(ProfilUtilisateur.GERANT, nom, prenom, mdp);
 
         } catch (IOException ex) {
             System.out.println("Erreur de connexion");

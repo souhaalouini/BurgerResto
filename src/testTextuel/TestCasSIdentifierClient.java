@@ -31,7 +31,7 @@ public class TestCasSIdentifierClient {
 
 		// Verification de la bonne realisation du cas
 		System.out.println("VERIFICATION");
-		System.out.println(controlSIdentifier.visualiserBDUtilisateur());
+		System.out.println(controlSIdentifier.visualiserBDClient());
 
 		// Resultat du test
 		// Veuilliez entrer votre login
