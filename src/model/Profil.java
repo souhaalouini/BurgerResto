@@ -38,10 +38,4 @@ public class Profil {
         }        
         return Boolean.FALSE;
     }
-    
-    public enum TypeProfil {
-    	Client,
-    	Personnel, 
-    	Gerant;
-    }
 }
