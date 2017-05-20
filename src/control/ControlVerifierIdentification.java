@@ -1,10 +1,10 @@
 package control;
 
-import model.Client;
 import restaurationRapide.BDClient;
 import restaurationRapide.BDPersonnel;
+import restaurationRapide.Client;
+import restaurationRapide.Personnel;
 import restaurationRapide.ProfilUtilisateur;
-import model.Personnel;
 
 public class ControlVerifierIdentification {
 

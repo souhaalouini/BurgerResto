@@ -33,7 +33,7 @@ public class TestCasEnregistrerCoordonneesBancaires {
 
 		BoundaryEnregistrerCoordonneesBancaires boundaryEnregistrerCoordonneesBancaires = new BoundaryEnregistrerCoordonneesBancaires(controlVerifierCoordonneesBancaires, controlEnregistrerCoordonneesBancaires);
 		// Lancement du cas
-		boundaryEnregistrerCoordonneesBancaires.renseignerInfoBancaire(numClient);
+		boundaryEnregistrerCoordonneesBancaires.renseignerCoordonneesBancaires(numClient);
 		// Verification de la bonne realisation du cas
 		System.out.println("VERIFICATION");
 		System.out.println(controlEnregistrerCoordonneesBancaires.visualiserBDClient());

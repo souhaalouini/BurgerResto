@@ -2,9 +2,6 @@ package restaurationRapide;
 
 import java.util.HashMap;
 import java.util.Map;
-import model.Client;
-import model.Personnel;
-import model.Profil;
 
 public class BDPersonnel {
 	private Map<Integer, Personnel> hm;
@@ -23,6 +20,7 @@ public class BDPersonnel {
     public Integer connexionPersonnel(String login, String mdp) {
         for (Integer i = 0; i < nbPersonnel; i++) {
             if (this.hm.get(i).selectProfil(login, mdp)) {
+            	this.hm.get(i).connexionProfil();
                 return i;
             }
         }

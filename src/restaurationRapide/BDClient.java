@@ -2,8 +2,6 @@ package restaurationRapide;
 
 import java.util.HashMap;
 import java.util.Map;
-import model.Client;
-import model.Profil;
 
 	public class BDClient {
 
@@ -23,6 +21,7 @@ import model.Profil;
 	    public Integer connexionClient(String login, String mdp) {
 	        for (Integer i = 0; i < nbClient; i++) {
 	            if (this.hm.get(i).selectProfil(login, mdp)) {
+	            	this.hm.get(i).connexionProfil();
 	                return i;
 	            }
 	        }
@@ -33,7 +32,8 @@ import model.Profil;
 	    public String toString() {
 	        Integer i;
 	        String data = "";
-
+	        
+	        // dans Profil avec hm
 	        for (i = 0; i < nbClient; i++) {
 	            data += ("--| Compte n°" + (Integer.valueOf(i + 1)).toString() + " :\n");
 	            data += ("------| Nom : " + hm.get(i).getNom() + "\n");

@@ -1,9 +1,9 @@
 package control;
 
-import model.Accompagnement;
-import model.Boisson;
-import model.Carte;
-import model.Hamburger;
+import restaurationRapide.Accompagnement;
+import restaurationRapide.Boisson;
+import restaurationRapide.Carte;
+import restaurationRapide.Hamburger;
 import restaurationRapide.AlimentMenu;
 
 public class ControlAjouterAlimentCarte {
@@ -12,10 +12,11 @@ public class ControlAjouterAlimentCarte {
 			
 		public ControlAjouterAlimentCarte(Carte carte) {
 			super();
-			carte = Carte.getInstance(); 
+			this.carte = Carte.getInstance(); 
+			//this.carte = carte;
 		}
 
-		// Carte est le nom de la classe, getInstance est une méthode staticic
+		// Carte est le nom de la classe, getInstance est une méthode statique
 
 		public void ajouterAliment(AlimentMenu aliment, String nom) {
 			switch(aliment) {
@@ -32,8 +33,14 @@ public class ControlAjouterAlimentCarte {
 				break;
 				
 			default:
+				System.out.println("[ ERREUR ] : Type d'aliment inconnu.");
 				break;
 			}
 		}
+		
+		public String visualiserCarte() {
+	        return carte.toString();
+	    }
+
 
 }

@@ -16,7 +16,7 @@ public class BoundaryEnregistrerCoordonneesBancaires {
         this.controlEnregistrerCoordonneesBancaires = controlEnregistrerCoordonneesBancaires;
     }
 
-    public boolean renseignerInfoBancaire(Integer numClient) {
+    public boolean renseignerCoordonneesBancaires(Integer numClient) {
         Integer numCarte = 0;
         String dateCarte = "";
         Boolean carteValide = Boolean.TRUE;

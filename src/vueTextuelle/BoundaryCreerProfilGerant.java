@@ -1,8 +1,8 @@
 package vueTextuelle;
 
-import model.Profil;
+import restaurationRapide.Profil;
 import restaurationRapide.ProfilUtilisateur;
-import model.Profil.TypeProfil;
+import restaurationRapide.Profil.TypeProfil;
 
 import java.io.BufferedReader;
 import java.io.IOException;

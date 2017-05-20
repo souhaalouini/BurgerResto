@@ -1,10 +1,10 @@
 package control;
 import restaurationRapide.BDClient;
 import restaurationRapide.BDPersonnel;
+import restaurationRapide.Client;
+import restaurationRapide.Personnel;
 import restaurationRapide.ProfilUtilisateur;
-import model.Client;
-import model.Personnel;
-import model.Profil.TypeProfil;
+import restaurationRapide.Profil.TypeProfil;
 
 public class ControlCreerProfil {
 	private BDClient laBDClient;
