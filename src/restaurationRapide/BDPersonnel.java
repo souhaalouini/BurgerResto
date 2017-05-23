@@ -2,21 +2,21 @@ package restaurationRapide;
 
 import java.util.HashMap;
 import java.util.Map;
-
+// Classe BDPersonnel (base de données du personnel du resto)
 public class BDPersonnel {
 	private Map<Integer, Personnel> hm;
     Integer nbPersonnel;
-
+    // Constructeur de la classe
     public BDPersonnel() {
         this.hm = new HashMap<>();
         nbPersonnel = 0;
     }
-
+    // Ajouter un personnel à la base de données
     public void ajouterPersonnel(Personnel personnel) {
         this.hm.put(nbPersonnel, personnel);
         nbPersonnel++;
     }
-    
+    // Connexion d'un personnel à la base de données
     public Integer connexionPersonnel(String login, String mdp) {
         for (Integer i = 0; i < nbPersonnel; i++) {
             if (this.hm.get(i).selectProfil(login, mdp)) {
@@ -26,7 +26,7 @@ public class BDPersonnel {
         }
         return -1;
     }
-
+    // Redéfinition de la méthode toString()
     @Override
     public String toString() {
         Integer i;
@@ -41,9 +41,8 @@ public class BDPersonnel {
         }
         return data;
     }
-    
+    // Obtenir le numéro du personnel
     public Personnel getPersonnel(Integer numprofil) {
         return this.hm.get(numprofil);
     }
-
 }

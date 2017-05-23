@@ -10,13 +10,13 @@ import restaurationRapide.Carte;
 import restaurationRapide.Commande;
 import restaurationRapide.ProfilUtilisateur;
 import vueTextuelle.BoundaryEnregistrerCoordonneesBancaires;
-
+// Boundary Commander
 public class BoundaryCommander {
 	
 	private ControlCommander controlCommander;
 	private ControlVerifierIdentification controlVerifierIdentification;
 	private BoundaryEnregistrerCoordonneesBancaires boundaryEnregistrerCoordonneesBancaires;
-	
+	// Constructor
 	public BoundaryCommander(ControlCommander controlCommander, ControlVerifierIdentification controlVerifierIdentification, BoundaryEnregistrerCoordonneesBancaires boundaryEnregistrerCoordonneesBancaires) {
 		this.controlCommander = controlCommander;
 		this.controlVerifierIdentification = controlVerifierIdentification;
@@ -58,7 +58,7 @@ public class BoundaryCommander {
     				Carte.getInstance().getAccompagnement().get(numAccompagnement - 1),
                     Carte.getInstance().getBoisson().get(numBoisson - 1),
                     numClient));
-
+    		numCommande++;
             System.out.println("Votre numéro de commande est le : " + numCommande);
 
         } catch (IOException ex) {

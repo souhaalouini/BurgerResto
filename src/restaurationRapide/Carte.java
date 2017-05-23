@@ -2,15 +2,16 @@ package restaurationRapide;
 
 import java.util.ArrayList;
 import java.util.List;
-
+// Classe Carte qui contient la liste des aliments du resto
 public class Carte {
 	
 	private static Carte LaCarte = null;
-	
+	// Déclaration des listes d'aliments sous-forme de tableaux
 	private ArrayList<Hamburger> listeHamburger = new ArrayList<> ();
 	private ArrayList<Boisson> listeBoisson = new ArrayList<> ();
 	private ArrayList<Accompagnement> listeAccompagnement = new ArrayList<> ();
 	
+	/* Getters et Setters sur les différents types d'aliments */
 	// getters
 	public ArrayList<Hamburger> getHamburger() {
 		return listeHamburger;
@@ -37,6 +38,7 @@ public class Carte {
         this.listeBoisson = listeBoisson;
     }
 	
+	// Ajouter un aliment à la carte
 	public void ajouterAliment(Hamburger hamburger) {
 		this.listeHamburger.add(hamburger);
 	}
@@ -56,7 +58,7 @@ public class Carte {
 		}
 		return LaCarte;
 	}
-	
+	// Obtenir la liste des hamburgers
 	public String getListeHamburger() {
         String data = "";
         for (int i = 0; i < this.listeHamburger.size(); i++) {
@@ -64,7 +66,7 @@ public class Carte {
         }
         return data;
     }
-    
+    // Obtenir la liste des accompagnements
     public String getListeAccompagnement() {
         String data = "";
         for (int i = 0; i < this.listeAccompagnement.size(); i++) {
@@ -72,7 +74,7 @@ public class Carte {
         }
         return data;
     }
-    
+    // Obtenir la liste des boissons
     public String getListeBoisson() {
         String data = "";
         for (int i = 0; i < this.listeBoisson.size(); i++) {
@@ -81,8 +83,7 @@ public class Carte {
         return data;
     }
 
-	
-	// methode toString()
+	// Redéfinition de la méthode toString()
 	@Override
 	public String toString() {
         String LaCarte = "listeHamburgerr : \n";

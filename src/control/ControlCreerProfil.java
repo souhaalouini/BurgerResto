@@ -1,3 +1,5 @@
+/* Controler : Définition du cas CreerProfil */
+
 package control;
 import restaurationRapide.BDClient;
 import restaurationRapide.BDPersonnel;
@@ -9,12 +11,12 @@ import restaurationRapide.Profil.TypeProfil;
 public class ControlCreerProfil {
 	private BDClient laBDClient;
     private BDPersonnel laBDPersonnel;
-
+    // Constructeur du control
     public ControlCreerProfil(BDClient bdClient, BDPersonnel bdPersonnel) {
         this.laBDClient = bdClient;
         this.laBDPersonnel = bdPersonnel;
     }
-
+    // Créer un profil utilisateur (client, gérant ou personnel)
     public void creerProfil(ProfilUtilisateur profil, String nom, String prenom, String mdp) {
         switch (profil) {
             case GERANT:
@@ -34,15 +36,15 @@ public class ControlCreerProfil {
                 break;
         }
     }
-
+    // Méthode qui permet de visualiser la base de données du client
     public String visualiserBDClient() {
         return "Compte de type client :\n" + laBDClient.toString();
     }
-
+    // Méthode qui permet de visualiser la base de données du personnel
     public String visualiserBDPersonnel() {
         return "Compte de type personnel :\n" + laBDPersonnel.toString();
     }
-
+    // Méthode qui permet de visualiser la base de données de l'utilisateur
 	public String visualiserBDUtilisateur() {
 		// TODO Auto-generated method stub
 		return this.laBDClient.toString();

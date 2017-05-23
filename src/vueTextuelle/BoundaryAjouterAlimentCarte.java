@@ -13,12 +13,12 @@ import restaurationRapide.Boisson;
 import restaurationRapide.Hamburger;
 import restaurationRapide.ProfilUtilisateur;
 import restaurationRapide.Carte;
-
+// Boundary AjouterAlimentCarte (vue)
 public class BoundaryAjouterAlimentCarte {
 	
 	private ControlVerifierIdentification controlVerifierIdentification;
 	private ControlAjouterAlimentCarte controlAjouterAlimentCarte;
-	
+	// Controler
 	public BoundaryAjouterAlimentCarte(ControlVerifierIdentification controlVerifierIdentification, ControlAjouterAlimentCarte controlAjouterAlimentCarte) {
 		this.controlVerifierIdentification = controlVerifierIdentification;
 		this.controlAjouterAlimentCarte = controlAjouterAlimentCarte;
